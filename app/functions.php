@@ -14,6 +14,9 @@ namespace Members\AddOns\AdminAccess;
 # Filter whether to show the toolbar.
 add_filter( 'show_admin_bar', __NAMESPACE__ . '\show_admin_bar', 95 );
 
+# Modify toolbar items.
+add_action( 'admin_bar_menu', __NAMESPACE__ . '\admin_bar_menu', 95 );
+
 /**
  * Filter on the `show_admin_bar` hook to disable the admin bar for users without admin access.
  *
@@ -25,6 +28,38 @@ add_filter( 'show_admin_bar', __NAMESPACE__ . '\show_admin_bar', 95 );
 function show_admin_bar( $show ) {
 
 	return disable_toolbar() && ! current_user_has_access() ? false : $show;
+}
+
+/**
+ * Removes items from the toolbar if it is showing for a user without access.
+ *
+ * @since  1.0.0
+ * @access public
+ * @param  object  $wp_admin_bar
+ * @return void
+ */
+function admin_bar_menu( $wp_admin_bar ) {
+
+	if ( is_admin() || disable_toolbar() || current_user_has_access() )
+		return;
+
+	$items = [
+		'about',
+		'site-name',
+		'dashboard',
+		'customize',
+		'updates',
+		'comments',
+		'new-content',
+		'edit',
+		'edit-profile',
+		'user-info'
+	];
+
+	apply_filters( app()->namespace . '/remove_toolbar_items', $items );
+
+	foreach ( $items as $item )
+		$wp_admin_bar->remove_menu( $item );
 }
 
 /**
