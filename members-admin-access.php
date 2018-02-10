@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: Members - Admin Access
- * Plugin URI:  https://themehybrid.com/plugins/members-core-create-caps
+ * Plugin URI:  https://themehybrid.com/plugins/members-admin-access
  * Description: Control which users can access the WordPress admin by role.
  * Version:     1.0.0
  * Author:      Justin Tadlock
  * Author URI:  https://themehybrid.com
- * Text Domain: members-core-create-caps
- * Domain Path: /languages
+ * Text Domain: members-admin-access
+ * Domain Path: /resources/lang
  *
  * This program is free software; you can redistribute it and/or modify it under the terms of the GNU
  * General Public License as published by the Free Software Foundation; either version 2 of the License,
