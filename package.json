@@ -4,7 +4,8 @@
   "description": "An add-on plugin for Members that allows you to control admin access by role.",
   "main": "index.js",
   "scripts": {
-    "build:i18n": "node resources/build/i18n.js"
+    "build:i18n": "node resources/build/i18n.js",
+    "build:dist": "node resources/build/dist.js"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
   },
   "homepage": "https://github.com/justintadlock/members-admin-access#readme",
   "devDependencies": {
-    "node-wp-i18n": "^1.0.5"
+    "copy": "^0.3.1",
+    "node-wp-i18n": "^1.0.5",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {}
 }
