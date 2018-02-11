@@ -21,7 +21,7 @@ return [
 	|
 	*/
 
-	'dir' => trailingslashit( plugin_dir_path( __FILE__ ) ) . '../',
+	'dir' => trailingslashit( realpath( trailingslashit( __DIR__ ) . '../' ) ),
 
 	/*
 	|--------------------------------------------------------------------------

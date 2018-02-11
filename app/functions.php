@@ -29,7 +29,7 @@ add_action( 'admin_bar_menu', __NAMESPACE__ . '\admin_bar_menu', 95 );
  */
 function load_textdomain() {
 
-    load_plugin_textdomain( 'members-admin-access', false, basename( realpath( app()->dir ) ) . '/resources/lang' );
+    load_plugin_textdomain( 'members-admin-access', false, basename( app()->dir ) . '/resources/lang' );
 }
 
 /**
