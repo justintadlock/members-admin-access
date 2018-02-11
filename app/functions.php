@@ -72,7 +72,7 @@ function admin_bar_menu( $wp_admin_bar ) {
 function get_default_settings() {
 
 	$settings = [
-		'roles'           => members_get_wordpress_roles(),
+		'roles'           => array_keys( members_get_roles() ), // Defaults to all roles.
 		'redirect_url'    => esc_url_raw( home_url() ),
 		'disable_toolbar' => true
 	];

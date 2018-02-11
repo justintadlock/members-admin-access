@@ -11,30 +11,45 @@
 
 namespace Members\AddOns\AdminAccess;
 
+/**
+ * Application class.
+ *
+ * @since  1.0.0
+ * @access public
+ */
 class App {
 
+	/**
+	 * Houses the plugin directory path.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @var    string
+	 */
 	public $dir = '';
 
-	public $namespace = 'members/addons/admin_access';
+	/**
+	 * Namespace used for filter hooks and such.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @var    string
+	 */
+	public $namespace = '';
 
-	public function __construct() {
+	/**
+	 * Takes in a configuration array and assigns the keys to the class properties.
+	 *
+	 * @since  1.0.0
+	 * @access public
+	 * @return void
+	 */
+	public function __construct( array $args = [] ) {
 
-		$this->setup();
-		$this->includes();
-	}
+		foreach ( array_keys( get_object_vars( $this ) ) as $key ) {
 
-	public function setup() {
-
-		$this->dir = plugin_dir_path( __FILE__ ) . '../';
-	}
-
-	public function includes() {
-
-		require_once( $this->dir . 'app/functions.php' );
-
-		if ( is_admin() ) {
-
-			require_once( $this->dir . 'app/functions-admin.php' );
+			if ( isset( $args[ $key ] ) )
+				$this->$key = $args[ $key ];
 		}
 	}
 }

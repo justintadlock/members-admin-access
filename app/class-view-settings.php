@@ -1,6 +1,7 @@
 <?php
 /**
- * Settings view.
+ * Outputs a custom settings view under "Admin Access" on the Members plugin
+ * settings page.
  *
  * @package   MembersAdminAccess
  * @author    Justin Tadlock <justin@justintadlock.com>
