@@ -11,11 +11,26 @@
 
 namespace Members\AddOns\AdminAccess;
 
+# Load plugin textdomain.
+add_action( 'init', __NAMESPACE__ . '\load_textdomain', 95 );
+
 # Filter whether to show the toolbar.
 add_filter( 'show_admin_bar', __NAMESPACE__ . '\show_admin_bar', 95 );
 
 # Modify toolbar items.
 add_action( 'admin_bar_menu', __NAMESPACE__ . '\admin_bar_menu', 95 );
+
+/**
+ * Loads the plugin's textdomain.
+ *
+ * @since  1.0.0
+ * @access public
+ * @return void
+ */
+function load_textdomain() {
+
+    load_plugin_textdomain( 'members-admin-access', false, basename( realpath( app()->dir ) ) . '/resources/lang' );
+}
 
 /**
  * Filter on the `show_admin_bar` hook to disable the admin bar for users without admin access.
