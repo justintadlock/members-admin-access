@@ -2,6 +2,8 @@
 
 Members - Admin Access is an add-on for the [Members plugin](https://themehybrid.com/plugins/members) that allows you to control which users have access to the WordPress admin via role.
 
+_Please note that this is a commercial plugin.  It is public here on GitHub so that anyone can contribute to its development or easily post bugs.  If using on a live site, please [purchase a copy of the plugin](https://themehybrid.com/plugins/members-admin-access)._
+
 ## Professional Support
 
 If you need professional plugin support from me, the plugin author, you can access the support forums at [Theme Hybrid](https://themehybrid.com/board/topics), which is a professional WordPress help/support site where I handle support for all my plugins and themes for a community of 75,000+ users (and growing).
