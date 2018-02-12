@@ -12,7 +12,7 @@
 namespace Members\AddOns\AdminAccess;
 
 # Load plugin textdomain.
-add_action( 'init', __NAMESPACE__ . '\load_textdomain', 95 );
+add_action( 'init', __NAMESPACE__ . '\load_textdomain', 0 );
 
 # Filter whether to show the toolbar.
 add_filter( 'show_admin_bar', __NAMESPACE__ . '\show_admin_bar', 95 );
