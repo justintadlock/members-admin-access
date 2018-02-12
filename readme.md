@@ -16,6 +16,22 @@ This project is licensed under the [GNU GPL](http://www.gnu.org/licenses/old-lic
 
 The use of this plugin is fairly straightforward.  You must have the [Members plugin](https://themehybrid.com/plugins/members) installed and activated to use this plugin.
 
+You should also have, at minimum, PHP 5.6 installed on your server.  If you're unsure of your PHP version, you can install the [Display PHP Version](https://wordpress.org/plugins/display-php-version/) plugin to check.
+
 ### Usage
 
-@todo
+The first thing you'll want to do is go to Settings > Members in your WordPress admin.  Click the "Admin Access" link on that page to view this plugin's settings.  From there, you'll see the following settings:
+
+#### Select Roles
+
+This setting allows you to select which roles will always have access to the WordPress admin.  Note that, by default, the Administrator role cannot be unselected and has permanent access.
+
+#### Redirect
+
+The redirect option allows you to set a URL to redirect users who do not have admin access.  By default, this is set to your site's home page.
+
+#### Toolbar
+
+Select whether you want to allow the toolbar to appear for users who don't have access.  
+
+The WordPress toolbar is generally considered an extension of the admin (was previously named "admin bar").  This plugin will auto-hide core WordPress admin links from the toolbar.  However, it cannot account for what third-party plugins add.  Therefore, the best option is to simply keep it disabled.
