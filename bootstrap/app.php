@@ -5,7 +5,7 @@
  * @package   MembersAdminAccess
  * @author    Justin Tadlock <justintadlock@gmail.com>
  * @copyright Copyright (c) 2018, Justin Tadlock
- * @link      http://themehybrid.com/plugins/members-admin-access
+ * @link      https://themehybrid.com/plugins/members-admin-access
  * @license   http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 
