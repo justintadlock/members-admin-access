@@ -21,7 +21,7 @@
  *
  * @package    MembersAdminAccess
  * @version    1.0.0
- * @author     Justin Tadlock <justin@justintadlock.com>
+ * @author     Justin Tadlock <justintadlock@gmail.com>
  * @copyright  Copyright (c) 2018, Justin Tadlock
  * @link       http://themehybrid.com/plugins/members-admin-access
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
