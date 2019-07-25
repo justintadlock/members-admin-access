@@ -3,7 +3,7 @@
  * Plugin Name: Members - Admin Access
  * Plugin URI:  https://themehybrid.com/plugins/members-admin-access
  * Description: Control which users can access the WordPress admin by role.
- * Version:     1.0.0
+ * Version:     1.0.1-alpha
  * Author:      Justin Tadlock
  * Author URI:  https://themehybrid.com
  * Text Domain: members-admin-access
