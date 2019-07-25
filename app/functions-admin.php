@@ -26,8 +26,13 @@ add_action( 'members_register_settings_views', __NAMESPACE__ . '\register_views'
  */
 function access_check() {
 
-	if ( ! current_user_has_access() )
+	if ( ! current_user_has_access() ) {
 		wp_redirect( esc_url_raw( get_redirect_url() ) );
+		exit;
+	}
+
+	// Override WooCommerce's admin redirect.
+	add_filter( 'woocommerce_prevent_admin_access', '__return_false' );
 }
 
 /**
