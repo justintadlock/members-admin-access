@@ -56,8 +56,13 @@ class View_Settings extends View {
 	function validate_settings( $settings ) {
 
 		// Validate selected roles.
-		if ( ! $settings['roles'] )
+		//
+		// Note that it's possible for `$settings['roles']` to not be set
+		// when no roles at all are selected.
+
+		if ( empty( $settings['roles'] ) ) {
 			$settings['roles'] = array();
+		}
 
 		foreach ( $settings['roles'] as $key => $role ) {
 
